@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+.container {
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(25, 25%, 20%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+    height: 60px;
+    border: none;
+    color: rgba(40, 30, 20, 0.9);
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    outline: none;
+    cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ---------------------------------------- */
+/* ----------------- MAIN ----------------- */
+/* ---------------------------------------- */
+.header,
+footer > form input,
+main > div,
+.notice {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header,
+footer > form,
+main > div,
+.notice {
+    width: 100vw;
 }
-
-.App-link {
-  color: #61dafb;
+.header {
+    position: fixed;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+.header,
+.notice {
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.header {
+    background-color: rgb(193, 60, 49);
+    color: rgba(40, 30, 20, 0.9);
+    border-bottom: 2px solid hsl(25, 25%, 20%);
+}
+/* ---------------------------------------- */
+/* ---------------- FOOTER ---------------- */
+/* ---------------------------------------- */
+footer > form input {
+    width: calc(100vw - 100px);
+}
+.notice {
+    background-color: hsl(25, 25%, 20%);
+    color: rgba(40, 30, 20, 0.9);
+}
+footer > button {
+    width: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-left: 2px solid hsl(25, 25%, 20%);
+    background-color: hsl(25, 75%, 47%);
+}
+footer > form {
+    position: fixed;
+    bottom: 0;
+}
+footer > div {
+    position: fixed;
+    bottom: 60px;
+}
+footer > form input {
+    background-color: hsl(25, 75%, 47%);
+    outline: none;
+    border: none;
+}
+footer > form input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
 }
